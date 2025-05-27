@@ -1,92 +1,160 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de Eventos - EventFlow</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #F9F9F9;
-            color: #333;
             margin: 0;
-            padding: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
         }
         header {
-            background-color: #0044cc;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-        .logo {
-            max-height: 60px;
-            vertical-align: middle;
+        header img {
+            height: 50px;
         }
         h1 {
-            display: inline;
-            font-size: 24px;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        main {
-            padding: 20px;
+            color: #1a237e;
         }
         section {
-            margin-bottom: 40px;
+            margin-top: 30px;
         }
         h2 {
-            border-bottom: 2px solid #0044cc;
-            padding-bottom: 5px;
+            color: #0d47a1;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
+        .evento {
             background-color: white;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-left: 4px solid #0044cc;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        a {
-            color: #0044cc;
-            text-decoration: none;
+        .evento h3 {
+            color: #1a237e;
+            margin: 0 0 10px 0;
         }
-        a:hover {
-            text-decoration: underline;
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        .info span {
+            font-weight: bold;
+        }
+        a.botao {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #1a237e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        a.botao:hover {
+            background-color: #0d47a1;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://lauraeventflow.s3.amazonaws.com/logo_eventflow.png" alt="Logo EventFlow" class="logo">
-        <h1>EventFlow</h1>
+        <img src="https://i.imgur.com/CwV1t3B.png" alt="Logo EventFlow">
+        <h1>EventFlow - Agenda de Eventos</h1>
     </header>
-    <main>
-        <section>
-            <h2>Eventos - 28/05</h2>
-            <ul>
-                <li><strong>ELABORAÇÃO DE CURRÍCULO</strong> — 08h - 12h — Online — <a href="https://www.sympla.com.br/evento-online/oficina-online-gratuita-elaboracao-de-curriculo/2945905">Acessar</a></li>
-                <li><strong>Tudo sobre o AWS Activate</strong> — 10h - 12h — Presencial — <a href="https://www.sympla.com.br/evento/tudo-sobre-o-aws-activate-o-programa-da-aws-para-impulsionar-sua-startup/2918191">Acessar</a></li>
-                <li><strong>Agentic AI Series (S1) - Building Multimodal Systems</strong> — 13h - 14h — Online — <a href="https://www.meetup.com/aittg-nyc/events/307942222/?msockid=2359001d6d0562e7243d137b6c6e6342">Acessar</a></li>
-                <li><strong>O Futuro do Digital e Varejo</strong> — 13h - 16h — Presencial — <a href="https://www.sympla.com.br/evento/o-futuro-do-digital-e-varejo-transformando-o-cliente-da-era-digital/2926336">Acessar</a></li>
-                <li><strong>Do Push ao Deploy — GitHub Actions</strong> — 19h - 20h — Online — <a href="https://www.meetup.com/totvsdevelopers/events/307803722/?eventOrigin=group_joined_upcoming_events">Acessar</a></li>
-                <li><strong>Diálogos Estratégicos - FGV</strong> — 19h - 20h — Online — <a href="https://evento.fgv.br/inovacao_2905/">Acessar</a></li>
-                <li><strong>Gestão de Tráfego Pago</strong> — 19h - 20h30 — Online — <a href="https://www.sympla.com.br/evento-online/palestra-online-gestao-de-trafego-pago-para-empreendedores/2957633">Acessar</a></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Eventos - 29/05</h2>
-            <ul>
-                <li><strong>Tudo sobre o AWS Activate</strong> — 10h - 12h — Presencial — <a href="https://www.sympla.com.br/evento/tudo-sobre-o-aws-activate-o-programa-da-aws-para-impulsionar-sua-startup/2918191">Acessar</a></li>
-                <li><strong>Agentic AI Series (S1) - Building Multimodal Systems</strong> — 13h - 14h — Online — <a href="https://www.meetup.com/aittg-nyc/events/307942222/?msockid=2359001d6d0562e7243d137b6c6e6342">Acessar</a></li>
-                <li><strong>O Futuro do Digital e Varejo</strong> — 13h - 16h — Presencial — <a href="https://www.sympla.com.br/evento/o-futuro-do-digital-e-varejo-transformando-o-cliente-da-era-digital/2926336">Acessar</a></li>
-                <li><strong>Do Push ao Deploy — GitHub Actions</strong> — 19h - 20h — Online — <a href="https://www.meetup.com/totvsdevelopers/events/307803722/?eventOrigin=group_joined_upcoming_events">Acessar</a></li>
-                <li><strong>Diálogos Estratégicos - FGV</strong> — 19h - 20h — Online — <a href="https://evento.fgv.br/inovacao_2905/">Acessar</a></li>
-                <li><strong>Gestão de Tráfego Pago</strong> — 19h - 20h30 — Online — <a href="https://www.sympla.com.br/evento-online/palestra-online-gestao-de-trafego-pago-para-empreendedores/2957633">Acessar</a></li>
-            </ul>
-        </section>
-    </main>
+
+    <section>
+        <h2>28 de Maio</h2>
+        <div class="evento">
+            <h3>ELABORAÇÃO DE CURRÍCULO</h3>
+            <div class="info">🕗 <span>08h - 12h</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://www.sympla.com.br/evento-online/oficina-online-gratuita-elaboracao-de-curriculo/2945905" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Tudo sobre o AWS Activate: o programa da AWS para impulsionar sua startup</h3>
+            <div class="info">🕙 <span>10h - 12h</span></div>
+            <div class="info">📍 <span>Presencial</span></div>
+            <a class="botao" href="https://www.sympla.com.br/evento/tudo-sobre-o-aws-activate-o-programa-da-aws-para-impulsionar-sua-startup/2918191" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Agentic AI Series (S1) - Building Multimodal Systems</h3>
+            <div class="info">🕐 <span>13h - 14h</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://www.meetup.com/aittg-nyc/events/307942222/" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>O Futuro do Digital e Varejo: Transformando o Cliente da Era Digital</h3>
+            <div class="info">🕑 <span>13h - 16h</span></div>
+            <div class="info">📍 <span>Presencial</span></div>
+            <a class="botao" href="https://www.sympla.com.br/evento/o-futuro-do-digital-e-varejo-transformando-o-cliente-da-era-digital/2926336" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Do Push ao Deploy — Automatizando Tudo com GitHub Actions</h3>
+            <div class="info">🕖 <span>19h - 20h</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://www.meetup.com/totvsdevelopers/events/307803722/" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Diálogos Estratégicos | Inovação - Decifra-me ou te devoro - FGV</h3>
+            <div class="info">🕖 <span>19h - 20h</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://evento.fgv.br/inovacao_2905/" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Gestão de Tráfego Pago para Empreendedores</h3>
+            <div class="info">🕖 <span>19h - 20h30</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://www.sympla.com.br/evento-online/palestra-online-gestao-de-trafego-pago-para-empreendedores/2957633" target="_blank">Se inscreva</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>29 de Maio</h2>
+        <div class="evento">
+            <h3>Tudo sobre o AWS Activate: o programa da AWS para impulsionar sua startup</h3>
+            <div class="info">🕙 <span>10h - 12h</span></div>
+            <div class="info">📍 <span>Presencial</span></div>
+            <a class="botao" href="https://www.sympla.com.br/evento/tudo-sobre-o-aws-activate-o-programa-da-aws-para-impulsionar-sua-startup/2918191" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Agentic AI Series (S1) - Building Multimodal Systems</h3>
+            <div class="info">🕐 <span>13h - 14h</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://www.meetup.com/aittg-nyc/events/307942222/" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>O Futuro do Digital e Varejo: Transformando o Cliente da Era Digital</h3>
+            <div class="info">🕑 <span>13h - 16h</span></div>
+            <div class="info">📍 <span>Presencial</span></div>
+            <a class="botao" href="https://www.sympla.com.br/evento/o-futuro-do-digital-e-varejo-transformando-o-cliente-da-era-digital/2926336" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Do Push ao Deploy — Automatizando Tudo com GitHub Actions</h3>
+            <div class="info">🕖 <span>19h - 20h</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://www.meetup.com/totvsdevelopers/events/307803722/" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Diálogos Estratégicos | Inovação - Decifra-me ou te devoro - FGV</h3>
+            <div class="info">🕖 <span>19h - 20h</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://evento.fgv.br/inovacao_2905/" target="_blank">Se inscreva</a>
+        </div>
+        <div class="evento">
+            <h3>Gestão de Tráfego Pago para Empreendedores</h3>
+            <div class="info">🕖 <span>19h - 20h30</span></div>
+            <div class="info">💻 <span>Online</span></div>
+            <a class="botao" href="https://www.sympla.com.br/evento-online/palestra-online-gestao-de-trafego-pago-para-empreendedores/2957633" target="_blank">Se inscreva</a>
+        </div>
+    </section>
 </body>
 </html>
