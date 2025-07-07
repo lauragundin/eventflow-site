@@ -1,120 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventFlow | Agenda de Eventos Gratuitos</title>
-    <link rel="icon" type="image/png" href="logo2.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        header img {
-            height: 50px;
-        }
-        h1 {
-            color: #1a237e;
-            font-size: 1.8em;
-        }
-        nav {
-            margin-top: 20px;
-            margin-bottom: 30px;
-            background-color: #e3f2fd;
-            padding: 10px;
-            border-radius: 8px;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #0d47a1;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            margin-top: 30px;
-        }
-        h2 {
-            color: #0d47a1;
-            margin-bottom: 15px;
-        }
-        .evento {
-            background-color: white;
-            border-radius: 10px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease;
-        }
-        .evento:hover {
-            transform: scale(1.01);
-        }
-        .evento h3 {
-            color: #1a237e;
-            margin: 0 0 10px 0;
-        }
-        .info {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 5px;
-            color: #444;
-        }
-        .info span {
-            font-weight: bold;
-        }
-        a.botao {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background-color: #1a237e;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        a.botao:hover {
-            background-color: #0d47a1;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            .evento h3 {
-                font-size: 1em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventFlow</title>
+  <link rel="icon" type="image/png" href="logo2.png.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header img {
+      height: 50px;
+      object-fit: contain;
+    }
+    header h1 {
+      color: #1a237e;
+      font-size: 22px;
+      margin: 0;
+    }
+    .atualizacao {
+      background-color: #e3f2fd;
+      padding: 10px 20px;
+      color: #0d47a1;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+    }
+    nav.dias {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      padding: 10px;
+      background-color: #e3f2fd;
+      font-weight: bold;
+    }
+    nav.dias a {
+      color: #0d47a1;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+    }
+    nav.dias a:hover {
+      background-color: #bbdefb;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      color: #0d47a1;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    .evento {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .evento h3 {
+      color: #1a237e;
+      margin: 0 0 10px 0;
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+      color: #444;
+    }
+    .info span {
+      font-weight: bold;
+    }
+    a.botao {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #1a237e;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    a.botao:hover {
+      background-color: #0d47a1;
+    }
+    #voltar-topo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #1a237e;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    #voltar-topo:hover {
+      background-color: #0d47a1;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo2.png" alt="Logotipo do EventFlow">
-        <h1>EventFlow - Agenda de Eventos</h1>
-    </header>
+  <header>
+    <img src="logo2.png.png" alt="Logotipo do EventFlow">
+    <h1>EventFlow - Agenda de Eventos</h1>
+  </header>
 
-    <nav aria-label="Navegação por datas">
-        <a href="#segunda">07/07</a>
-        <a href="#terca">08/07</a>
-        <a href="#quarta">09/07</a>
-        <a href="#quinta">10/07</a>
-        <a href="#sexta">11/07</a>
-        <a href="#sabado">12/07</a>
-    </nav>
-        <h1>EventFlow - Agenda de Eventos</h1>
-    </header>
-</body>
-</html>
+  <div class="atualizacao">
+    Agenda atualizada semanalmente. Aproveite os eventos da semana!
+  </div>
+
+  <nav class="dias">
+    <a href="#dia07">07/07</a>
+    <a href="#dia08">08/07</a>
+    <a href="#dia09">09/07</a>
+    <a href="#dia10">10/07</a>
+    <a href="#dia11">11/07</a>
+    <a href="#dia12">12/07</a>
+  </nav>
 
     <section id="segunda">
         <h2>07 de julho (segunda-feira)</h2>
@@ -334,5 +353,16 @@
         
     </section>
 
+  <button id="voltar-topo" title="Voltar ao topo">⬆</button>
+
+  <script>
+    const btnTopo = document.getElementById("voltar-topo");
+    window.addEventListener("scroll", () => {
+      btnTopo.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    btnTopo.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
