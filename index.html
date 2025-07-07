@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventFlow</title>
-    <link rel="icon" type="image/png" href="logo2.png.png">
+    <title>EventFlow | Agenda de Eventos Gratuitos</title>
+    <link rel="icon" type="image/png" href="logo2.png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,18 +16,37 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            flex-wrap: wrap;
         }
         header img {
             height: 50px;
         }
         h1 {
             color: #1a237e;
+            font-size: 1.8em;
+        }
+        nav {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0d47a1;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
             margin-top: 30px;
         }
         h2 {
             color: #0d47a1;
+            margin-bottom: 15px;
         }
         .evento {
             background-color: white;
@@ -35,6 +54,10 @@
             padding: 15px 20px;
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .evento:hover {
+            transform: scale(1.01);
         }
         .evento h3 {
             color: #1a237e;
@@ -59,15 +82,35 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         a.botao:hover {
             background-color: #0d47a1;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .evento h3 {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo2.png.png" alt="Logo EventFlow">
+        <img src="logo2.png" alt="Logotipo do EventFlow">
+        <h1>EventFlow - Agenda de Eventos</h1>
+    </header>
+
+    <nav aria-label="Navegação por datas">
+        <a href="#segunda">07/07</a>
+        <a href="#terca">08/07</a>
+        <a href="#quarta">09/07</a>
+        <a href="#quinta">10/07</a>
+        <a href="#sexta">11/07</a>
+        <a href="#sabado">12/07</a>
+    </nav>
         <h1>EventFlow - Agenda de Eventos</h1>
     </header>
 </body>
